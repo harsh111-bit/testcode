@@ -1,0 +1,16 @@
+<h3>USERS LIST</h3>
+<button class="btn btn-primary" (click)="getUsersList()">GET USERS</button>
+
+<a style="cursor: pointer;" class="list-group-item clearfix" [routerLink]="['/userDetail']">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12" *ngFor="let user of users">
+        <div class="col-xs-2">{{user.name.first}}</div>
+        <div class="col-xs-2">{{user.name.last}}</div>
+        <div class="col-xs-3">{{user.cell}}</div>
+        <div class="col-xs-3">{{user.name.email}}</div>
+        <div class="col-xs-3">{{user.name.dob}}</div>
+      </div>
+    </div>
+  </div>
+</a>
